@@ -1,0 +1,55 @@
+.btn-spacing-5px {
+    margin-bottom: 5px;
+}
+
+.error {
+    margin-top: 5px;
+    color: red;
+}
+
+.card{
+    margin-top: 0%;
+    margin-bottom: 25px;
+}
+
+.button-middle{
+    display: inline-block;
+}
+
+.btn-edit{
+    float: right;
+    background-image: url("../Content/edit.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 16px;
+}
+
+#button-redirect-modal{
+    
+}
+
+#button-close-modal{
+    margin: 0 auto;
+    display: block;
+}
+
+#button-register {
+    float: right;
+    margin-bottom: 15px;
+}
+
+#button-google-login {
+    background-color: rgba(200, 200, 200, 0.5);
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    color: black;
+}
+
+#username-display{
+    margin-left: 25px;
+}
+
+#title-profile{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
