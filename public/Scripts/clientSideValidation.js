@@ -21,6 +21,8 @@ async function validateUsername(username)
                 if (snapshot.exists())
                 {
                     $("#username-taken").html("Username already taken").css("color", "red");
+                    isAvailable = false;
+                    return;
                 }
                 else
                 {
@@ -33,6 +35,9 @@ async function validateUsername(username)
             console.log(error.code);
         });
 
+    if (!isAvailable)
+        return;
+
     // Check for username regex matches or not.
     if (username)
     {
@@ -42,7 +47,8 @@ async function validateUsername(username)
             return;
         } else
         {
-            $("#username-taken").html("Username can be used");
+            console.log("BUT WHY HERE THO");
+            $("#username-taken").html("Username can be used").css("color", "green");
         }
     } else
     {

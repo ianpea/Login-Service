@@ -261,7 +261,7 @@ $("#button-edit-phone-number").click(function ()
 {
     createEditModal(
         "Edit Phone Number",
-        `<input class="form-control" type="tel" id="inputPhoneNumber" placeholder="Enter your new phone number">`,
+        `<input class="form-control" type="number" id="inputPhoneNumber" placeholder="Enter your new phone number">`,
         "phone-number",
         "Cancel",
         "");
