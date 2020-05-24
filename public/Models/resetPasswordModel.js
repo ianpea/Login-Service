@@ -31,7 +31,7 @@ function confirm(newPassword, newConfirmPassword)
                     createModal(
                         "Status",
                         "Password reset successful for email <b>" + resetEmail + "</b>",
-                        "../Views/index.html",
+                        "../views/index.html",
                         "Return to Login");
                 }).catch(function (error)
                 {

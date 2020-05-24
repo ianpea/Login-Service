@@ -72,12 +72,12 @@ function loginGoogle()
                         }).then(function ()
                         {
                             console.log("Registered successful for new google user.");
-                            window.location.assign("../Views/home.html");
+                            window.location.assign("../views/home.html");
                         });
                     });
                 } else
                 {
-                    window.location.assign("../Views/home.html");
+                    window.location.assign("../views/home.html");
                 }
             });
     }).catch(function (error)
@@ -103,7 +103,7 @@ auth.onAuthStateChanged(function (user)
         // Else if provider is not password, e.g. "google", redirect in its 
         // related method, e.g. "loginGoogle()";
         if (currentUser.providerData[0].providerId == "password")
-            window.location.assign("../Views/home.html");
+            window.location.assign("../views/home.html");
     }
     else
     {

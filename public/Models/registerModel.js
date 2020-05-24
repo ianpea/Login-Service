@@ -97,7 +97,7 @@ function writeUserData(username, dateOfBirth, countryCode, phoneNumber)
         createModal(
             "Registration successful!",
             "You have successfully registered your account <b>" + username + "</b>.",
-            "../Views/index.html",
+            "../views/index.html",
             "Return to Login",
         );
     });
