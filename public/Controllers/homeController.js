@@ -303,7 +303,6 @@ $(document).on('click', "#button-update-country-code", function ()
     {
         updateField("country-code", $("#inputCountryCode").val());
     }
-
 });
 
 $(document).on('click', "#button-update-phone-number", function ()

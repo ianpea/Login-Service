@@ -11,7 +11,6 @@ var auth = firebase.auth();
 
 function confirm(newPassword, newConfirmPassword)
 {
-    spinnerLoading($("#button-confirm-password"), "", null);
     if (!validatePassword(newPassword, newConfirmPassword))
     {
         console.log("Password not allowed.");
@@ -25,10 +24,10 @@ function confirm(newPassword, newConfirmPassword)
             // Display a "new password" form with the user's email address
             resetEmail = email;
 
-            auth.confirmPasswordReset(code, newPassword)
+            auth.confirmPasswordReset(code, newConfirmPassword)
                 .then(function ()
                 {
-                    console.log('Password reset successful for email: ' + resetEmail + " " + newPassword);
+                    console.log('Password reset successful for email: ' + resetEmail + " " + newConfirmPassword);
                     createModal(
                         "Status",
                         "Password reset successful for email <b>" + resetEmail + "</b>",

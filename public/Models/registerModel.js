@@ -17,18 +17,6 @@ var countryCodeRegex = /^(\+?\d{1,3}|\d{1,4})$/;
 // Check for is username taken.
 var isCheckingUsername = false;
 
-function validateCountryCode(countryCode)
-{
-    // Check if countryCode mataches the regex.
-    if (!countryCode.match(countryCodeRegex))
-    {
-        createAlert("Invalid country code, examples: 60, 3, 33...");
-        stopSpinnerLoading($("#button-register"), "Register");
-        return false;
-    } else
-        return true;
-}
-
 function register(email, password, confirmPassword, username, dateOfBirth, countryCode, phoneNumber)
 {
     if (!validateCountryCode(countryCode))

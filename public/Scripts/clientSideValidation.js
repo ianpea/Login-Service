@@ -7,6 +7,20 @@ var countryCodeRegex = /^(\+?\d{1,3}|\d{1,4})$/;
 // Check for is username taken.
 var isCheckingUsernameRegex = false;
 
+function validateCountryCode(countryCode)
+{
+    // Check if countryCode mataches the regex.
+    if (!countryCode.match(countryCodeRegex))
+    {
+        $("#invalid-country-code").html("Invalid country code, examples: +60, +65, +33...");
+        return false;
+    } else
+    {
+        $("#invalid-country-code").html("");
+        return true;
+    }
+}
+
 async function validateUsername(username)
 {
     console.log("Checking username...");
@@ -47,7 +61,6 @@ async function validateUsername(username)
             return;
         } else
         {
-            console.log("BUT WHY HERE THO");
             $("#username-taken").html("Username can be used").css("color", "green");
         }
     } else
@@ -57,23 +70,6 @@ async function validateUsername(username)
 
     return isAvailable;
 }
-
-
-function validateCountryCode(countryCode)
-{
-    // Check if countryCode mataches the regex.
-    if (!countryCode.match(countryCodeRegex))
-    {
-        $("#invalid-country-code").html("Invalid country code, examples: 60, 3, 33...");
-        stopSpinnerLoading($("#button-register"), "Register");
-        return false;
-    } else
-    {
-        $("#invalid-country-code").html("");
-        return true;
-    }
-}
-
 
 function validatePassword(password, confirmPassword)
 {

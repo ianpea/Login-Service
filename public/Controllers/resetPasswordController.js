@@ -1,26 +1,12 @@
-$('#inputPassword, #inputConfirmPassword').on('keyup', function ()
+$("#inputPassword, #inputConfirmPassword").on('keyup', function ()
 {
-    confirmPassword = $("#inputConfirmPassword").val();
-    if (confirmPassword)
-    {
-        if ($('#inputPassword').val() == $('#inputConfirmPassword').val())
-        {
-            $('#password-not-matching').html('Matching').css('color', 'green');
-        } else
-        {
-            $('#password-not-matching').html('Not Matching').css('color', 'red');
-            return;
-        }
-    } else
-    {
-        $('#password-not-matching').html('');
-    }
+    validatePassword($("#inputPassword").val(), $("#inputConfirmPassword").val());
 });
-
 $("#button-confirm-password").click(function ()
 {
     password = $("#inputPassword ").val();
     confirmPassword = $("#inputConfirmPassword").val();
 
-    confirm(confirmPassword);
+    spinnerLoading(this, "", null);
+    confirm(password, confirmPassword);
 });
