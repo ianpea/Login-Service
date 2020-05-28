@@ -12,7 +12,7 @@ function sendPasswordResetEmail(email)
         createModal(
             "Status",
             "Password reset email have been sent to <b>" + email + "</b>",
-            "../views/index.html",
+            "../login/index.html",
             "Return to Login"
         )
     }).catch(function (error)

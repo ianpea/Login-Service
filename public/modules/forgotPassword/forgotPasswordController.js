@@ -7,5 +7,5 @@ $("#button-reset-password").click(function ()
 
 $("#button-to-login-page").click(function ()
 {
-    spinnerLoading(this, "", "../views/index.html");
+    spinnerLoading(this, "", "../login/index.html");
 })

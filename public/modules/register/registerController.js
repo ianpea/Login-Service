@@ -26,5 +26,5 @@ $("#button-to-login-page").click(function ()
 {
     firebase.auth().signOut();
     spinnerLoading(this, "", null);
-    window.location.assign("../views/index.html");
+    window.location.assign("../login/index.html");
 });

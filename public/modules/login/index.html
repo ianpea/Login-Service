@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-    <link rel="stylesheet" href="../content/style.css">
+    <link rel="stylesheet" href="../../content/style.css">
 
     <title>Login Service by Ian Pee</title>
 
@@ -28,7 +28,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
-    <script src="../scripts/firebaseInit.js"></script>
+    <script src="../../scripts/firebaseInit.js"></script>
 </head>
 
 <body>
@@ -48,23 +48,23 @@
                 </div>
             </div>
             <div class="container">
-                <a href="../views/forgotPassword.html" id="button-forgot-password">Forgot password?</a>
-                <a href="../views/register.html" id="button-register">Register</a>
+                <a href="/modules/forgotPassword/forgotPassword.html" id="button-forgot-password">Forgot password?</a>
+                <a href="/modules/register/register.html" id="button-register">Register</a>
             </div>
-            <button id="button-sign-in" type="button" class="btn btn-primary btn-spacing-5px">Sign In</button>
+            <button id="button-sign-in" type="button" class="btn btn-primary btn-spacing-5px">Login</button>
             <button id="button-google-login" type="button" class="btn btn-secondary btn-spacing-5px">
-                Sign with Google
-                <img src="../content/favicon_google_new.png" width="16" height="16">
+                Login with Google
+                <img src="../../content/favicon_google_new.png" width="16" height="16">
             </button>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="../scripts/spinner.js"></script>
+    <script src="../../scripts/spinner.js"></script>
 
     <!-- Model & Controller -->
-    <script src="../models/loginModel.js"></script>
-    <script src="../controllers/loginController.js"></script>
+    <script src="/modules/login/loginModel.js"></script>
+    <script src="/modules/login/loginController.js"></script>
 </body>
 
 </html>

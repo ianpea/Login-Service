@@ -116,7 +116,7 @@ function readUserData()
 
 const actionCodeSettings = {
     // Replace this URL with the URL where the user will complete sign-in.
-    url: 'https://login-service-by-ian-pee.web.app/views/home.html',
+    url: 'https://login-service-by-ian-pee.web.app/modules/home/home.html',
     handleCodeInApp: true
 };
 
@@ -134,7 +134,6 @@ function sendVerificationEmail(email)
         .catch(function (error)
         {
             console.log(error.code);
-            // Some error occurred, you can inspect the code: error.code
         });
 }
 
@@ -154,7 +153,7 @@ auth.onAuthStateChanged(function (user)
         if (currentUser != null)
         {
             console.log(currentUser.email + " has logged out. ");
-            window.location.assign("../views/index.html");
+            window.location.assign("/modules/login/index.html");
         }
 
     }

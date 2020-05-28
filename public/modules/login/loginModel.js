@@ -27,7 +27,7 @@ function loginWithEmail(email, password)
                 $("#error-text").html(`Wrong password`);
                 break;
             case "auth/too-many-requests":
-                $("#error-text").html(`Too many requests, pleaese come back later`);
+                $("#error-text").html(`Too many requests, please come back later`);
                 break;
             case "auth/invalid-email":
                 $("#error-text").html(`Invalid email`);
@@ -72,12 +72,12 @@ function loginGoogle()
                         }).then(function ()
                         {
                             console.log("Registered successful for new google user.");
-                            window.location.assign("../views/home.html");
+                            window.location.assign("/modules/home/home.html");
                         });
                     });
                 } else
                 {
-                    window.location.assign("../views/home.html");
+                    window.location.assign("/modules/home/home.html");
                 }
             });
     }).catch(function (error)
@@ -86,7 +86,7 @@ function loginGoogle()
         console.log(errorCode);
 
         stopSpinnerLoading($("#button-google-login"), `Login with Google 
-        <img src="../Content/favicon_google_new.png" width="16" height="16">`)
+        <img src="../../content/favicon_google_new.png" width="16" height="16">`)
     });
 }
 
@@ -102,8 +102,9 @@ auth.onAuthStateChanged(function (user)
         // If provider is "password", then redirect to home.html.
         // Else if provider is not password, e.g. "google", redirect in its 
         // related method, e.g. "loginGoogle()";
-        if (currentUser.providerData[0].providerId == "password")
-            window.location.assign("../views/home.html");
+        var providerId = currentUser.providerData[0].providerId;
+        if (providerId == "google.com" || providerId == "password")
+            window.location.assign("/modules/home/home.html");
     }
     else
     {

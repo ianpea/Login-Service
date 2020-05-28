@@ -18,7 +18,7 @@
 
 .btn-edit{
     float: right;
-    background-image: url("../Content/edit.png");
+    background-image: url("../../content/edit.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
